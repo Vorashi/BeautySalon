@@ -1,0 +1,28 @@
+﻿<Application x:Class="BeautySalon.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BeautySalon"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush Color="White" x:Key="BaseColor"/>
+        <SolidColorBrush Color="#FFE1E4FF" x:Key="DoubleColor"/>
+        <SolidColorBrush Color="#FFFF4A6D" x:Key="HonorColor"/>
+        <SolidColorBrush Color="Gray" x:Key="UnActive"/>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="Margin" Value="0,0,20,0"></Setter>
+            <Setter Property="Background" Value="{DynamicResource HonorColor}"></Setter>
+            <Setter Property="FontFamily" Value="Tahoma"></Setter>
+            <Setter Property="MaxHeight" Value="200"></Setter>
+            <Setter Property="MaxWidth" Value="60"></Setter>
+            <Setter Property="MinHeight" Value="20"></Setter>
+            <Setter Property="MinWidth" Value="100"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="FontFamily" Value="Tahoma"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

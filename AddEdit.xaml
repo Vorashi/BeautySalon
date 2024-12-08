@@ -1,0 +1,99 @@
+﻿<Window x:Class="BeautySalon.AddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalon"
+        mc:Ignorable="d"
+        Title="AddEdit"     
+        Height="530" Width="500"
+        MinHeight="530" MinWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" MaxHeight="100"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="{DynamicResource DoubleColor}">
+            <Image Source="/Resources/beauty_logo.png" 
+               DockPanel.Dock="Left" 
+               Margin="10" 
+               VerticalAlignment="Center"/>
+            <TextBlock Text="BeautySalon"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"/>
+        </DockPanel>
+        <!--Колонка с полями для заполнения-->
+        <StackPanel Grid.Row="1" Margin="15">
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="ID"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBox Text="{Binding ID}" x:Name="Name" IsReadOnly="True"/>
+            </DockPanel>
+
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="Title"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBlock Text="{Binding Title}"/>
+            </DockPanel>
+
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="Cost"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBox Text="{Binding Cost}" x:Name="Rating"/>
+            </DockPanel>
+
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="Description"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBox Text="{Binding Description}" x:Name="Address"/>
+            </DockPanel>
+
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="MainImagePath"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBox Text="{Binding MainImagePath}" x:Name="Director"/>
+            </DockPanel>
+
+            <DockPanel Margin="0,10,0,0">
+                <TextBlock DockPanel.Dock="Left"
+                       Text="Active"
+                       Margin="0,0,5,0"
+                       Width="160"/>
+                <TextBox Text="{Binding ActiveString}" x:Name="Phone"/>
+            </DockPanel>
+            <Image Width="120" Height="60" Source="/Resources/picture.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,10,0,0" x:Name="ImageView"/>
+
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,20,15,0">
+                <Button x:Name="ClearBtn"
+                    Width="90"
+                    Content="Очистить"
+                    Visibility="Visible"
+                    Margin="0,0,10,0"
+                    Click="ClearBtn_Click"/>
+                <Button x:Name="SaveBtn"
+                    Width="100"
+                    Content="Сохранить"
+                    Click="SaveBtn_Click"/>
+                <Button x:Name="BackBtn"
+                    Width="100"
+                    Content="Назад"
+                    Margin="10,0,0,0"
+                    Click="BackBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
